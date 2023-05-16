@@ -5,18 +5,19 @@ import { books } from './Books'
 
 const BookCard = () => {
     return (
-        <SafeAreaView>
-            <ScrollView>
+        <ScrollView>
+            <SafeAreaView>
                 {books.map(b =>
                     <View style={styles.container}>
                         <Image source={b.cover} style={styles.img} />
-                        <Text>{b.title}</Text>
-                        <Text>{b.author}</Text>
-                        <Text>{b.blurb}</Text>
+                        <Text style={styles.title}>{b.title}</Text>
+                        <Text style={styles.author}>by {b.author}</Text>
+                        {/* text här ska vara knapp med länk till modal med mer info om boken */}
+                        <Text>Blurb here</Text>
                     </View>
                 )}
-            </ScrollView>
-        </SafeAreaView>
+            </SafeAreaView>
+        </ScrollView>
     )
 }
 
@@ -26,20 +27,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    header: {
+        fontSize: 40
+    },
     img: {
-        flex: 1,
-        height: 250,
+        height: 240,
         width: 150,
-        
     },
     title: {
-        flex: 1
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: 'bold'
     },
     author: {
-        flex: 1
-    },
-    blurb: {
-        flex: 1
+        fontSize: 18
     }
 })
 

@@ -1,4 +1,4 @@
-import { View } from "react-native"
+import { View, StyleSheet, Text } from "react-native"
 
 const MyBooks = () => {
 
@@ -8,8 +8,33 @@ const MyBooks = () => {
     // lista på mest lästa genres??
 
     return (
-        <View></View>
+        <View>
+            <Text>Your books:</Text>
+        </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    header: {
+        fontSize: 40
+    },
+    img: {
+        height: 240,
+        width: 150,
+    },
+    title: {
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: 'bold'
+    },
+    author: {
+        fontSize: 18
+    }
+})
 
 export default MyBooks
