@@ -1,10 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createAppContainer } from "react-navigation";
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import MyBooks from './screens/MyBooks';
+import LibraryScreen from './screens/LibraryScreen';
 
 const Tab = createBottomTabNavigator()
 
@@ -13,7 +12,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={() => ({
-          tabBarActiveTintColor: 'black',
+          tabBarActiveTintColor: '#800000',
           tabBarInactiveTintColor: 'gray',
           tabBarStyle: { paddingTop: 2, height: 60 },
           tabBarLabelStyle: { paddingBottom: 8 }
@@ -24,7 +23,7 @@ export default function App() {
             tabBarIcon: ({ focused }) => {
               return <Ionicons
                 name={focused ? 'home' : 'home-outline'}
-                color='black'
+                color={focused ? '#800000' : 'black'}
                 size={24} />
             },
           }}
@@ -36,19 +35,19 @@ export default function App() {
             tabBarIcon: ({ focused }) => {
               return <Ionicons
                 name={focused ? 'book' : 'book-outline'}
-                color='black'
+                color={focused ? '#800000' : 'black'}
                 size={24} />
             },
           }}
           name="Library"
-          component={MyBooks}
+          component={LibraryScreen}
         />
         <Tab.Screen
           options={{
             tabBarIcon: ({ focused }) => {
               return <Ionicons
                 name={focused ? 'person' : 'person-outline'}
-                color='black'
+                color={focused ? '#800000' : 'black'}
                 size={24} />
             },
           }}
@@ -57,6 +56,6 @@ export default function App() {
         />
       </Tab.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
