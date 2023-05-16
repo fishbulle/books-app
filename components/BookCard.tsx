@@ -24,16 +24,16 @@ const BookCard = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        flex: 2,
+        flexWrap: 'wrap',
+        maxHeight: 100
     },
     header: {
         fontSize: 40
     },
     img: {
-        height: 240,
-        width: 150,
+        height: 140,
+        width: 50,
     },
     title: {
         textAlign: 'center',

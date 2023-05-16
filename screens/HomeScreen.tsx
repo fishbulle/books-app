@@ -26,7 +26,8 @@ const HomeScreen = () => {
     return (
         <View style={styles.container} onLayout={onLayoutRootView}>
             <View>
-                <Text style={styles.header}>Book Finder</Text>
+                <Text style={styles.header}>Book Heaven</Text>
+                <Text style={styles.smallHeader}>Find your next read!</Text>
             </View>
             <BookCard />
         </View>
@@ -35,12 +36,20 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     header: {
-        paddingTop: 20,
-        fontSize: 50,
+        paddingTop: 40,
+        paddingBottom: 10,
+        fontSize: 45,
         fontFamily: 'Paperkind',
+    },
+    smallHeader: {
+        paddingBottom: 20,
+        fontFamily: 'Love',
+        fontSize: 25,
         textAlign: 'center'
     }
 })
