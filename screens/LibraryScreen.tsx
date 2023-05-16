@@ -22,15 +22,15 @@ const MyBooks = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 2,
-        justifyContent: 'center',
-        alignItems: 'center'
+        flexWrap: 'wrap',
+        maxHeight: 100
     },
     header: {
         fontSize: 40
     },
     img: {
-        height: 240,
-        width: 150,
+        height: 140,
+        width: 50,
     },
     title: {
         textAlign: 'center',
