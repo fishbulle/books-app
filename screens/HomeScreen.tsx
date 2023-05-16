@@ -1,4 +1,5 @@
 import { View } from "react-native"
+import BookCard from "../components/BookCard"
 
 const HomeScreen = () => {
 
@@ -8,7 +9,9 @@ const HomeScreen = () => {
     // lista på genres
 
     return (
-        <View></View>
+        <View>
+            <BookCard />
+        </View>
     )
 }
 

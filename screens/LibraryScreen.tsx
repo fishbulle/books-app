@@ -4,7 +4,8 @@ const MyBooks = () => {
 
     // komponenter:
     // böcker med info
-    // lista på mest lästa genres
+    // knapp (MyButton) för att visa mer info i en modal
+    // lista på mest lästa genres??
 
     return (
         <View></View>
