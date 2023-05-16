@@ -26,6 +26,7 @@ export default function App() {
                 color={focused ? '#800000' : 'black'}
                 size={24} />
             },
+            headerShown: false
           }}
           name="Home"
           component={HomeScreen}
@@ -38,6 +39,7 @@ export default function App() {
                 color={focused ? '#800000' : 'black'}
                 size={24} />
             },
+            headerShown: false
           }}
           name="Library"
           component={LibraryScreen}
@@ -50,6 +52,7 @@ export default function App() {
                 color={focused ? '#800000' : 'black'}
                 size={24} />
             },
+            headerShown: false
           }}
           name="Profile"
           component={ProfileScreen}
