@@ -5,7 +5,7 @@ const ProfileScreen = () => {
     // komponenter:
     // profilbild
     // namn (text)
-    // input favoritböcker
+    // input favoritböcker (med 2 keyboards)
 
     return (
         <View></View>
