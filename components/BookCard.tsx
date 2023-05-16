@@ -6,9 +6,9 @@ import { books } from './Books'
 const BookCard = () => {
     return (
         <ScrollView>
-            <SafeAreaView style={styles.container}>
+            <SafeAreaView>
                 {books.map(b =>
-                    <View style={styles.row} key={b.id}>
+                    <View style={styles.container} key={b.id}>
                         <Image style={styles.img} source={b.cover} />
                         <Text style={styles.title}>{b.title}</Text>
                         <Text style={styles.author}>by {b.author}</Text>
@@ -24,28 +24,23 @@ const BookCard = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 2,
-        marginHorizontal: 'auto',
-        width: 400,
-        flexWrap: 'wrap'
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     row: {
-        flexDirection: 'row'
     },
     img: {
         height: 240,
-        width: 150,
-        flex: 1
+        width: 150
     },
     title: {
         textAlign: 'center',
         fontSize: 20,
-        fontWeight: 'bold',
-        flex: 2
+        fontWeight: 'bold'
     },
     author: {
-        fontSize: 18,
-        flex: 2
+        fontSize: 18
     }
 })
 
