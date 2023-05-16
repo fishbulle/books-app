@@ -1,18 +1,18 @@
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard } from "react-native"
 import BookCard from "../components/BookCard"
 
 const HomeScreen = () => {
 
-    // komponenter:
-    // böcker med info
-    // knapp (MyButton) för att visa mer info i en modal
-    // lista på genres
-
     return (
+        <TouchableWithoutFeedback
+            onPress={() => {
+                Keyboard.dismiss()
+            }}>
         <View style={styles.container}>
             <Text style={styles.header}>Discover your new favorite book today!</Text>
             <BookCard />
         </View>
+        </TouchableWithoutFeedback>
     )
 }
 
@@ -21,7 +21,9 @@ const styles = StyleSheet.create({
         flex: 1
     },
     header: {
+        paddingTop: 20,
         fontSize: 40,
+        fontFamily: 'monospace',
         textAlign: 'center'
     }
 })

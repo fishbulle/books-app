@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text } from "react-native"
+import { View, StyleSheet, Text, TouchableWithoutFeedback, Keyboard } from "react-native"
 
 const MyBooks = () => {
 
@@ -8,9 +8,14 @@ const MyBooks = () => {
     // lista på mest lästa genres??
 
     return (
+        <TouchableWithoutFeedback
+            onPress={() => {
+                Keyboard.dismiss()
+            }}>
         <View>
             <Text>Your books:</Text>
         </View>
+        </TouchableWithoutFeedback>
     )
 }
 

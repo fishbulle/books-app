@@ -8,12 +8,13 @@ const BookCard = () => {
         <ScrollView>
             <SafeAreaView>
                 {books.map(b =>
-                    <View style={styles.container}>
-                        <Image source={b.cover} style={styles.img} />
+                    <View style={styles.container} key={b.id}>
+                        <Image style={styles.img} source={b.cover} />
                         <Text style={styles.title}>{b.title}</Text>
                         <Text style={styles.author}>by {b.author}</Text>
-                        {/* text här ska vara knapp med länk till modal med mer info om boken */}
                         <Text>Blurb here</Text>
+                        {/* text här ska vara knapp med länk till modal med mer info om boken */}
+                        {/* möjlighet att lägga till bok till sitt bibiliotek? */}
                     </View>
                 )}
             </SafeAreaView>

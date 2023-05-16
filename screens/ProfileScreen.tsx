@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Keyboard, TouchableWithoutFeedback, View } from "react-native";
 
 const ProfileScreen = () => {
 
@@ -8,7 +8,12 @@ const ProfileScreen = () => {
     // input favoritböcker (med 2 keyboards)
 
     return (
+        <TouchableWithoutFeedback
+            onPress={() => {
+                Keyboard.dismiss()
+            }}>
         <View></View>
+        </TouchableWithoutFeedback>
     )   
 }
 
