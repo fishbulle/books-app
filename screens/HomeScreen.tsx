@@ -10,7 +10,10 @@ const HomeScreen = () => {
     const [fontsLoaded] = useFonts({
         'Paperkind': require('../assets/fonts/Paperkind.otf'),
         'Love': require('../assets/fonts/Love.ttf'),
-        'Cherolina': require('../assets/fonts/Cherolina.otf')
+        'Cherolina': require('../assets/fonts/Cherolina.otf'),
+        'Halimun': require('../assets/fonts/Halimun.ttf'),
+        'Champagne': require('../assets/fonts/Champagne.ttf'),
+        'RoyalWedding': require('../assets/fonts/RoyalWedding.otf')
     })
 
     const onLayoutRootView = useCallback(async () => {
@@ -27,7 +30,7 @@ const HomeScreen = () => {
         <View style={styles.container} onLayout={onLayoutRootView}>
             <View style={styles.headerContainer}>
                 <Text style={styles.header}>Book Heaven</Text>
-                <Text style={styles.smallHeader}>Find your next read!</Text>
+                <Text style={styles.smallHeader}>find your next read!</Text>
             </View>
             <BookCard />
         </View>
@@ -53,8 +56,8 @@ const styles = StyleSheet.create({
         color: '#333'
     },
     smallHeader: {
-        fontFamily: 'Love',
-        fontSize: 25,
+        fontFamily: 'Cherolina',
+        fontSize: 40,
         textAlign: 'center',
         color: '#333',
         paddingBottom: 15
