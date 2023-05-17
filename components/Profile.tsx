@@ -15,35 +15,36 @@ export default function Profile() {
     }
 
     return (
-        <ScrollView>
-            <SafeAreaView>
-                <View style={[styles.container, styles.elevation]}>
-                    <View style={styles.profileInfo}>
-                        <Image style={styles.img} source={require('../assets/bookworm.jpg')} />
-                        <BaskervilleBold style={styles.name}>{'Angelina'}</BaskervilleBold>
-                        <Baskerville style={styles.info}>{'Sweden. Fantasy lover.'}</Baskerville>
-                    </View>
-                    <View>
-                        <ChampagneFont style={styles.add}>{'Your favorite books?'}</ChampagneFont>
-                        <TextInput
-                            style={styles.input}
-                            value={text}
-                            placeholder='...'
-                            onChangeText={onChangeText} />
-                        <MyButton
-                            title={'ADD TO LIST'}
-                            handlePress={onPress}
-                            style={styles.buttonText}
-                            buttonStyle={{}} />
-                        <FlatList
-                            data={books}
-                            renderItem={({ item }) =>
-                                <ChampagneFont style={styles.list}>{item}</ChampagneFont>
-                            } />
-                    </View>
+        <SafeAreaView style={[styles.container, styles.elevation]}>
+            <ScrollView>
+                <View style={styles.profileInfo}>
+                    <Image style={styles.img} source={require('../assets/bookworm.jpg')} />
+                    <BaskervilleBold style={styles.name}>{'Angelina'}</BaskervilleBold>
+                    <Baskerville style={styles.info}>{'Sweden. Fantasy lover.'}</Baskerville>
                 </View>
-            </SafeAreaView>
-        </ScrollView>
+                <View>
+                    <ChampagneFont style={styles.add}>{'Your favorite books?'}</ChampagneFont>
+                    <TextInput
+                        style={styles.input}
+                        value={text}
+                        placeholder='...'
+                        onChangeText={onChangeText}
+                    />
+                    <MyButton
+                        title={'ADD TO LIST'}
+                        handlePress={onPress}
+                        style={styles.buttonText}
+                        buttonStyle={{}} />
+                </View>
+            </ScrollView>
+            <FlatList
+                horizontal={false}
+                numColumns={2}
+                data={books}
+                renderItem={({ item }) =>
+                    <ChampagneFont style={styles.list}>{item} </ChampagneFont>
+                } />
+        </SafeAreaView>
     )
 }
 
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'white',
         margin: 20,
-        paddingTop: 150,
+        paddingTop: 20,
         borderRadius: 30,
         width: 340
     },

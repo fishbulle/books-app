@@ -1,5 +1,6 @@
 import { View, StyleSheet, TouchableWithoutFeedback, Keyboard } from "react-native"
 import { Header } from "../components/Header"
+import Library from "../components/Library"
 
 function LibraryScreen() {
     return (
@@ -9,6 +10,7 @@ function LibraryScreen() {
             }}>
             <View style={styles.container}>
                 <Header />
+                <Library />
             </View>
         </TouchableWithoutFeedback>
     )
