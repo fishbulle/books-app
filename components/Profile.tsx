@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet, TextInput, FlatList } from 'react-native'
+import { View, Image, StyleSheet, TextInput } from 'react-native'
 import { Baskerville, BaskervilleBold, ChampagneFont } from './MyFonts'
 import { MyButton } from './MyButton'
 import { useState } from 'react'
@@ -39,10 +39,10 @@ export default function Profile() {
                 </View>
             </ScrollView>
             <List
-            horizontal={false}
-            cols={2}
-            data={books}
-            style={styles.list} />
+                horizontal={false}
+                cols={2}
+                data={books}
+                style={styles.list} />
         </SafeAreaView>
     )
 }

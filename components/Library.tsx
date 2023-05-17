@@ -1,5 +1,6 @@
-    // komponenter:
-    // lista på mest lästa genres??
+    // TODO:
+    // lista på mest lästa genres
+    // visa upp nån bok som är "sparad"
 
 import { View, Text } from "react-native";
 

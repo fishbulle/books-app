@@ -5,14 +5,12 @@ import { Baskerville, BaskervilleBold } from './MyFonts'
 
 export default function BookCard() {
     const addBook = () => {
-        console.log('Book added to your library')
-        // hitta bok id
-        // skicka bok till libraryScreen
-        
+        console.log('Book added to your library... but not really')        
     }
 
     const readMore = () => {
         console.log('Here comes a modal')
+        // TODO:
         // hitta bok id
         // skapa en modal som visar bokens summering
     }

@@ -1,4 +1,4 @@
-import { FlatList, Text } from "react-native";
+import { FlatList } from "react-native";
 import { Baskerville } from "./MyFonts";
 
 interface Props {
