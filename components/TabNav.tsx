@@ -12,8 +12,8 @@ export default function TabNav() {
         <NavigationContainer>
             <Tab.Navigator
                 screenOptions={() => ({
-                    tabBarActiveTintColor: '#800000',
-                    tabBarInactiveTintColor: 'gray',
+                    tabBarActiveTintColor: '#765a3d',
+                    tabBarInactiveTintColor: '#333',
                     tabBarStyle: { paddingTop: 2, height: 60 },
                     tabBarLabelStyle: { paddingBottom: 8 }
                 })}
@@ -23,7 +23,7 @@ export default function TabNav() {
                         tabBarIcon: ({ focused }) => {
                             return <Ionicons
                                 name={focused ? 'home' : 'home-outline'}
-                                color={focused ? '#660033' : 'black'}
+                                color={focused ? '#765a3d' : '#333'}
                                 size={24} />
                         },
                         headerShown: false
@@ -36,7 +36,7 @@ export default function TabNav() {
                         tabBarIcon: ({ focused }) => {
                             return <Ionicons
                                 name={focused ? 'book' : 'book-outline'}
-                                color={focused ? '#660033' : 'black'}
+                                color={focused ? '#765a3d' : '#333'}
                                 size={24} />
                         },
                         headerShown: false
@@ -49,7 +49,7 @@ export default function TabNav() {
                         tabBarIcon: ({ focused }) => {
                             return <Ionicons
                                 name={focused ? 'person' : 'person-outline'}
-                                color={focused ? '#660033' : 'black'}
+                                color={focused ? '#765a3d' : '#333'}
                                 size={24} />
                         },
                         headerShown: false
