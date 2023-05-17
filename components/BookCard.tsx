@@ -1,6 +1,7 @@
 import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import { books } from './Books'
 import { MyButton } from './MyButton'
+import { Baskerville, BaskervilleBold, ChampagneBoldFont, ChampagneFont } from './MyFonts'
 
 export default function BookCard() {
     const addBook = () => {
@@ -19,8 +20,8 @@ export default function BookCard() {
                         <View style={styles.bookCoverContainer}>
                             <Image style={styles.img} source={b.cover} />
                         </View>
-                        <Text style={styles.title}>{b.title}</Text>
-                        <Text style={styles.author}>by {b.author}</Text>
+                        <BaskervilleBold style={styles.title}>{b.title}</BaskervilleBold>
+                        <Baskerville style={styles.author}>by {b.author}</Baskerville>
                         <View style={styles.buttonRow}>
                             <MyButton
                                 title={'READ MORE'}
@@ -71,16 +72,14 @@ const styles = StyleSheet.create({
     },
     title: {
         textAlign: 'center',
-        fontFamily: 'Champagne',
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 25,
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 15,
         paddingBottom: 5
     },
     author: {
-        fontSize: 18,
+        fontSize: 17,
         paddingBottom: 15,
     },
     buttonText: {

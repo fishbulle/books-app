@@ -84,3 +84,81 @@ export const HalimunFont = ({ style, children }: Props) => {
         </Text>
     )
 }
+
+export const Baskerville = ({ style, children }: Props) => {
+    const [fontLoaded, setFontLoaded] = useState(false);
+
+    useEffect(() => {
+        async function loadFont() {
+            await Font.loadAsync({
+                'LibreBaskerville-Regular': require('../assets/fonts/LibreBaskerville-Regular.ttf'),
+            });
+
+            setFontLoaded(true)
+        }
+
+        loadFont()
+    }, [])
+
+    if (!fontLoaded) {
+        return <Text>Loading...</Text>;
+    }
+
+    return (
+        <Text style={{ ...style, fontFamily: 'LibreBaskerville-Regular' }}>
+            {children}
+        </Text>
+    )
+}
+
+export const BaskervilleBold = ({ style, children }: Props) => {
+    const [fontLoaded, setFontLoaded] = useState(false);
+
+    useEffect(() => {
+        async function loadFont() {
+            await Font.loadAsync({
+                'LibreBaskerville-Bold': require('../assets/fonts/LibreBaskerville-Bold.ttf'),
+            });
+
+            setFontLoaded(true)
+        }
+
+        loadFont()
+    }, [])
+
+    if (!fontLoaded) {
+        return <Text>Loading...</Text>;
+    }
+
+    return (
+        <Text style={{ ...style, fontFamily: 'LibreBaskerville-Bold' }}>
+            {children}
+        </Text>
+    )
+}
+
+export const BaskervilleItalic = ({ style, children }: Props) => {
+    const [fontLoaded, setFontLoaded] = useState(false);
+
+    useEffect(() => {
+        async function loadFont() {
+            await Font.loadAsync({
+                'LibreBaskerville-Italic': require('../assets/fonts/LibreBaskerville-Italic.ttf'),
+            });
+
+            setFontLoaded(true)
+        }
+
+        loadFont()
+    }, [])
+
+    if (!fontLoaded) {
+        return <Text>Loading...</Text>;
+    }
+
+    return (
+        <Text style={{ ...style, fontFamily: 'LibreBaskerville-Italic' }}>
+            {children}
+        </Text>
+    )
+}
