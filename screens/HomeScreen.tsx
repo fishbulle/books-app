@@ -8,12 +8,9 @@ SplashScreen.preventAutoHideAsync()
 
 const HomeScreen = () => {
     const [fontsLoaded] = useFonts({
-        'Paperkind': require('../assets/fonts/Paperkind.otf'),
-        'Love': require('../assets/fonts/Love.ttf'),
-        'Cherolina': require('../assets/fonts/Cherolina.otf'),
         'Halimun': require('../assets/fonts/Halimun.ttf'),
         'Champagne': require('../assets/fonts/Champagne.ttf'),
-        'RoyalWedding': require('../assets/fonts/RoyalWedding.otf')
+        'ChampagneBold': require('../assets/fonts/ChampagneBold.ttf'),
     })
 
     const onLayoutRootView = useCallback(async () => {
@@ -30,7 +27,7 @@ const HomeScreen = () => {
         <View style={styles.container} onLayout={onLayoutRootView}>
             <View style={styles.headerContainer}>
                 <Text style={styles.header}>Book Heaven</Text>
-                <Text style={styles.smallHeader}>find your next read!</Text>
+                <Text style={styles.smallHeader}>find your next read</Text>
             </View>
             <BookCard />
         </View>
@@ -51,13 +48,15 @@ const styles = StyleSheet.create({
     header: {
         paddingTop: 50,
         paddingBottom: 10,
-        fontSize: 45,
-        fontFamily: 'Paperkind',
+        fontSize: 50,
+        fontFamily: 'ChampagneBold',
+        textTransform: 'uppercase',
         color: '#333'
     },
     smallHeader: {
-        fontFamily: 'Cherolina',
-        fontSize: 40,
+        fontFamily: 'Halimun',
+        // textTransform: 'uppercase',
+        fontSize: 20,
         textAlign: 'center',
         color: '#333',
         paddingBottom: 15

@@ -16,7 +16,9 @@ export default function BookCard() {
             <SafeAreaView>
                 {books.map(b =>
                     <View style={[styles.container, styles.elevation]} key={b.id}>
-                        <Image style={styles.img} source={b.cover} />
+                        <View style={styles.bookCoverContainer}>
+                            <Image style={styles.img} source={b.cover} />
+                        </View>
                         <Text style={styles.title}>{b.title}</Text>
                         <Text style={styles.author}>by {b.author}</Text>
                         <View style={styles.buttonRow}>
@@ -46,17 +48,26 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         margin: 20,
         paddingTop: 22,
-        borderRadius: 30
+        borderRadius: 30,
     },
     elevation: {
         elevation: 10,
         shadowColor: '#333333',
     },
+    bookCoverContainer: {
+        backgroundColor: '#e6e6e6',
+        width: 200,
+        height: 200,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 30,
+        marginBottom: 30,
+        borderRadius: 5
+    },
     img: {
         height: 240,
         width: 150,
-        borderRadius: 5,
-
+        borderRadius: 5
     },
     title: {
         textAlign: 'center',
