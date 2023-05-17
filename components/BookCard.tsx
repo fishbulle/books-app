@@ -37,10 +37,15 @@ const styles = StyleSheet.create({
     title: {
         textAlign: 'center',
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingLeft: 40,
+        paddingRight: 40,
+        paddingTop: 15,
+        paddingBottom: 5
     },
     author: {
-        fontSize: 18
+        fontSize: 18,
+        paddingBottom: 30
     }
 })
 
