@@ -4,6 +4,7 @@ import { MyButton } from './MyButton'
 import { useState } from 'react'
 import { SafeAreaView } from 'react-navigation'
 import { ScrollView } from 'react-native-gesture-handler'
+import List from './List'
 
 export default function Profile() {
     const [text, onChangeText] = useState('')
@@ -37,13 +38,11 @@ export default function Profile() {
                         buttonStyle={{}} />
                 </View>
             </ScrollView>
-            <FlatList
-                horizontal={false}
-                numColumns={2}
-                data={books}
-                renderItem={({ item }) =>
-                    <ChampagneFont style={styles.list}>{item} </ChampagneFont>
-                } />
+            <List
+            horizontal={false}
+            cols={2}
+            data={books}
+            style={styles.list} />
         </SafeAreaView>
     )
 }
