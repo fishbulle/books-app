@@ -16,10 +16,12 @@ export const MyButton = ({ handlePress, title, style}: ButtonProps) => {
 
 const styles = StyleSheet.create({
     pressable: {
-        backgroundColor: 'lightpink',
-        padding: 8,
-        borderWidth: 1,
-        borderColor: 'black',
-        marginBottom: 20
+        backgroundColor: '#660033',
+        paddingTop: 5,
+        paddingBottom: 6,
+        paddingLeft: 12,
+        paddingRight: 12,
+        marginBottom: 20,
+        borderRadius: 20
     }
 })

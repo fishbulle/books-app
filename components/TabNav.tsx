@@ -23,7 +23,7 @@ const TabNav = () => {
                         tabBarIcon: ({ focused }) => {
                             return <Ionicons
                                 name={focused ? 'home' : 'home-outline'}
-                                color={focused ? '#800000' : 'black'}
+                                color={focused ? '#660033' : 'black'}
                                 size={24} />
                         },
                         headerShown: false
@@ -36,7 +36,7 @@ const TabNav = () => {
                         tabBarIcon: ({ focused }) => {
                             return <Ionicons
                                 name={focused ? 'book' : 'book-outline'}
-                                color={focused ? '#800000' : 'black'}
+                                color={focused ? '#660033' : 'black'}
                                 size={24} />
                         },
                         headerShown: false
@@ -49,7 +49,7 @@ const TabNav = () => {
                         tabBarIcon: ({ focused }) => {
                             return <Ionicons
                                 name={focused ? 'person' : 'person-outline'}
-                                color={focused ? '#800000' : 'black'}
+                                color={focused ? '#660033' : 'black'}
                                 size={24} />
                         },
                         headerShown: false

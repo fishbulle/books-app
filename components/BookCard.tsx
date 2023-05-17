@@ -13,7 +13,7 @@ const BookCard = () => {
         <ScrollView>
             <SafeAreaView>
                 {books.map(b =>
-                    <View style={styles.container} key={b.id}>
+                    <View style={[styles.container, styles.elevation]} key={b.id}>
                         <Image style={styles.img} source={b.cover} />
                         <Text style={styles.title}>{b.title}</Text>
                         <Text style={styles.author}>by {b.author}</Text>
@@ -21,7 +21,7 @@ const BookCard = () => {
                         {/* text här ska vara knapp med länk till modal med mer info om boken */}
                         {/* möjlighet att lägga till bok till sitt bibiliotek? */}
                         <MyButton 
-                        title={'Add to library'} 
+                        title={'ADD TO LIBRARY'} 
                         handlePress={addBook}
                         style={styles.buttonText} />
                     </View>
@@ -35,13 +35,21 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'white',
+        margin: 20,
+        paddingTop: 22,
+        borderRadius: 30
     },
-    row: {
+    elevation: {
+        elevation: 10,
+        shadowColor: '#333333',
     },
     img: {
         height: 240,
-        width: 150
+        width: 150,
+        borderRadius: 5,
+        
     },
     title: {
         textAlign: 'center',
@@ -54,10 +62,11 @@ const styles = StyleSheet.create({
     },
     author: {
         fontSize: 18,
-        paddingBottom: 30,
+        paddingBottom: 15,
     },
     buttonText: {
-        color: 'white'
+        color: 'white',
+        fontSize: 12
     }
 })
 

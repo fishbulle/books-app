@@ -38,19 +38,21 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#f9f2eb'
     },
     header: {
-        paddingTop: 40,
+        paddingTop: 50,
         paddingBottom: 10,
         fontSize: 45,
         fontFamily: 'Paperkind',
+        color: '#333'
     },
     smallHeader: {
-        paddingBottom: 20,
         fontFamily: 'Love',
         fontSize: 25,
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#333'
     }
 })
 
