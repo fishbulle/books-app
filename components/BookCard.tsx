@@ -4,7 +4,7 @@ import { MyButton } from './MyButton'
 
 // knapp(MyButton) för att visa mer info i en modal
 
-const BookCard = () => {
+export function BookCard() {
     const addBook = () => {
         console.log('Book added to your library')        
     }
@@ -69,5 +69,3 @@ const styles = StyleSheet.create({
         fontSize: 12
     }
 })
-
-export default BookCard

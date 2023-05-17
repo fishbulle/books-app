@@ -7,7 +7,7 @@ import LibraryScreen from '../screens/LibraryScreen';
 
 const Tab = createBottomTabNavigator()
 
-const TabNav = () => {
+export function TabNav() {
     return (
         <NavigationContainer>
             <Tab.Navigator
@@ -61,5 +61,3 @@ const TabNav = () => {
         </NavigationContainer>
     )
 }
-
-export default TabNav

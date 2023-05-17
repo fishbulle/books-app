@@ -8,7 +8,11 @@ interface ButtonProps {
 
 export const MyButton = ({ handlePress, title, style}: ButtonProps) => {
     return (
-        <Pressable style={[styles.pressable]} onPress={handlePress}>
+        <Pressable 
+        style={[styles.pressable]} 
+        onPress={handlePress}
+        android_ripple={{ color: '#333' }}
+        hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}>
             <Text style={style}>{title}</Text>
         </Pressable>
     )
