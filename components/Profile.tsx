@@ -3,6 +3,7 @@ import { Baskerville, BaskervilleBold, ChampagneFont } from './MyFonts'
 import { MyButton } from './MyButton'
 import { useState } from 'react'
 import { SafeAreaView } from 'react-navigation'
+import { ScrollView } from 'react-native-gesture-handler'
 
 export default function Profile() {
     const [text, onChangeText] = useState('')
@@ -14,33 +15,35 @@ export default function Profile() {
     }
 
     return (
-        <SafeAreaView>
-            <View style={[styles.container, styles.elevation]}>
-                <View style={styles.profileInfo}>
-                    <Image style={styles.img} source={require('../assets/bookworm.jpg')} />
-                    <BaskervilleBold style={styles.name}>{'Angelina'}</BaskervilleBold>
-                    <Baskerville style={styles.info}>{'Sweden. Fantasy lover.'}</Baskerville>
+        <ScrollView>
+            <SafeAreaView>
+                <View style={[styles.container, styles.elevation]}>
+                    <View style={styles.profileInfo}>
+                        <Image style={styles.img} source={require('../assets/bookworm.jpg')} />
+                        <BaskervilleBold style={styles.name}>{'Angelina'}</BaskervilleBold>
+                        <Baskerville style={styles.info}>{'Sweden. Fantasy lover.'}</Baskerville>
+                    </View>
+                    <View>
+                        <ChampagneFont style={styles.add}>{'Your favorite books?'}</ChampagneFont>
+                        <TextInput
+                            style={styles.input}
+                            value={text}
+                            placeholder='...'
+                            onChangeText={onChangeText} />
+                        <MyButton
+                            title={'ADD TO LIST'}
+                            handlePress={onPress}
+                            style={styles.buttonText}
+                            buttonStyle={{}} />
+                        <FlatList
+                            data={books}
+                            renderItem={({ item }) =>
+                                <ChampagneFont style={styles.list}>{item}</ChampagneFont>
+                            } />
+                    </View>
                 </View>
-                <View>
-                    <ChampagneFont style={styles.add}>{'Your favorite books?'}</ChampagneFont>
-                    <TextInput
-                        style={styles.input}
-                        value={text}
-                        placeholder='...'
-                        onChangeText={onChangeText} />
-                    <MyButton
-                        title={'ADD TO LIST'}
-                        handlePress={onPress}
-                        style={styles.buttonText}
-                        buttonStyle={{}} />
-                    <FlatList
-                        data={books}
-                        renderItem={({ item }) =>
-                            <ChampagneFont style={styles.list}>{item}</ChampagneFont>
-                        } />
-                </View>
-            </View>
-        </SafeAreaView>
+            </SafeAreaView>
+        </ScrollView>
     )
 }
 
@@ -81,7 +84,6 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
     },
     add: {
-        textTransform: 'uppercase',
         fontSize: 16
     },
     buttonText: {
@@ -96,6 +98,6 @@ const styles = StyleSheet.create({
         padding: 10
     },
     list: {
-
+        fontSize: 20
     }
 })
