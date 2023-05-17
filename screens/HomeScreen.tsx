@@ -25,7 +25,7 @@ const HomeScreen = () => {
 
     return (
         <View style={styles.container} onLayout={onLayoutRootView}>
-            <View>
+            <View style={styles.headerContainer}>
                 <Text style={styles.header}>Book Heaven</Text>
                 <Text style={styles.smallHeader}>Find your next read!</Text>
             </View>
@@ -41,6 +41,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#f9f2eb'
     },
+    headerContainer: {
+        borderBottomWidth: 2,
+        borderBottomColor: '#ece1d5',
+    },
     header: {
         paddingTop: 50,
         paddingBottom: 10,
@@ -52,7 +56,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Love',
         fontSize: 25,
         textAlign: 'center',
-        color: '#333'
+        color: '#333',
+        paddingBottom: 15
     }
 })
 
