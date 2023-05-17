@@ -34,9 +34,7 @@ export const books = [{
     id: '5',
     title: 'Gild',
     author: 'Raven Kennedy',
-        blurb: "The fae abandoned this world to us. And the ones with power rule. Gold. Gold floors, gold walls, gold furniture, gold clothes. In Highbell, in the castle built into the frozen mountains, everything is made of gold. Even me. King Midas rescued me. Dug me out of the slums and placed me on a pedestal. I'm called his precious. His favored. I'm the woman he Gold-Touched to show everyone that I belong to him. To show how powerful he is. He gave me protection, and I gave him my heart. And even though I don't leave the confines of the palace, I'm safe. Until war comes to the kingdom and a deal is struck. Suddenly, my trust is broken. My love is challenged. And I realize that everything I thought I knew about Midas might be wrong. Because these bars I'm kept in, no matter how gilded, are still just a cage. But the monsters on the other side might make me wish I'd never left.",
+    blurb: "The fae abandoned this world to us. And the ones with power rule. Gold. Gold floors, gold walls, gold furniture, gold clothes. In Highbell, in the castle built into the frozen mountains, everything is made of gold. Even me. King Midas rescued me. Dug me out of the slums and placed me on a pedestal. I'm called his precious. His favored. I'm the woman he Gold-Touched to show everyone that I belong to him. To show how powerful he is. He gave me protection, and I gave him my heart. And even though I don't leave the confines of the palace, I'm safe. Until war comes to the kingdom and a deal is struck. Suddenly, my trust is broken. My love is challenged. And I realize that everything I thought I knew about Midas might be wrong. Because these bars I'm kept in, no matter how gilded, are still just a cage. But the monsters on the other side might make me wish I'd never left.",
     cover: require('../assets/gild.jpg'),
     genre: ['fantasy', 'romance', 'retellings']
-    }
-
-]
+}]
