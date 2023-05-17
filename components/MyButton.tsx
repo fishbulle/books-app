@@ -3,16 +3,16 @@ import { Pressable, StyleSheet, Text } from "react-native"
 interface ButtonProps {
     title: string,
     style: {},
+    buttonStyle: {},
     handlePress(): void
 }
 
-export const MyButton = ({ handlePress, title, style}: ButtonProps) => {
+export const MyButton = ({ handlePress, title, style, buttonStyle }: ButtonProps) => {
     return (
         <Pressable 
-        style={[styles.pressable]} 
+        style={[styles.pressable, buttonStyle]} 
         onPress={handlePress}
-        android_ripple={{ color: '#333' }}
-        hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}>
+        android_ripple={{ color: '#fff' }}>
             <Text style={style}>{title}</Text>
         </Pressable>
     )
@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
         paddingLeft: 12,
         paddingRight: 12,
         marginBottom: 20,
+        marginLeft: 10,
+        marginRight: 10,
         borderRadius: 20
     }
 })

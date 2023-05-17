@@ -2,11 +2,13 @@ import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-n
 import { books } from './Books'
 import { MyButton } from './MyButton'
 
-// knapp(MyButton) för att visa mer info i en modal
-
-export function BookCard() {
+export default function BookCard() {
     const addBook = () => {
-        console.log('Book added to your library')        
+        console.log('Book added to your library')
+    }
+
+    const readMore = () => {
+        console.log('Here comes a modal')
     }
 
     return (
@@ -17,13 +19,18 @@ export function BookCard() {
                         <Image style={styles.img} source={b.cover} />
                         <Text style={styles.title}>{b.title}</Text>
                         <Text style={styles.author}>by {b.author}</Text>
-                        {/* <Text>Blurb here</Text> */}
-                        {/* text här ska vara knapp med länk till modal med mer info om boken */}
-                        {/* möjlighet att lägga till bok till sitt bibiliotek? */}
-                        <MyButton 
-                        title={'ADD TO LIBRARY'} 
-                        handlePress={addBook}
-                        style={styles.buttonText} />
+                        <View style={styles.buttonRow}>
+                            <MyButton
+                                title={'READ MORE'}
+                                handlePress={readMore}
+                                style={styles.buttonText}
+                                buttonStyle={{}} />
+                            <MyButton
+                                title={'ADD TO LIBRARY'}
+                                handlePress={addBook}
+                                style={styles.buttonText}
+                                buttonStyle={{ backgroundColor: 'black' }} />
+                        </View>
                     </View>
                 )}
             </SafeAreaView>
@@ -49,7 +56,7 @@ const styles = StyleSheet.create({
         height: 240,
         width: 150,
         borderRadius: 5,
-        
+
     },
     title: {
         textAlign: 'center',
@@ -67,5 +74,8 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'white',
         fontSize: 12
+    },
+    buttonRow: {
+        flexDirection: 'row'
     }
 })
