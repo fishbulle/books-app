@@ -1,5 +1,6 @@
 import { Keyboard, TouchableWithoutFeedback, View, StyleSheet } from "react-native";
 import { Header } from "../components/Header";
+import Profile from "../components/Profile";
 
 function ProfileScreen() {
     return (
@@ -9,6 +10,7 @@ function ProfileScreen() {
             }}>
             <View style={styles.container}>
                 <Header />
+                <Profile />
             </View>
         </TouchableWithoutFeedback>
     )
