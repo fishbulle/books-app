@@ -1,4 +1,5 @@
-import { Pressable, StyleSheet, Text } from "react-native"
+import { Pressable, StyleSheet } from "react-native"
+import { ChampagneBoldFont } from "./MyFonts"
 
 interface ButtonProps {
     title: string,
@@ -13,7 +14,7 @@ export const MyButton = ({ handlePress, title, style, buttonStyle }: ButtonProps
         style={[styles.pressable, buttonStyle]} 
         onPress={handlePress}
         android_ripple={{ color: '#fff' }}>
-            <Text style={style}>{title}</Text>
+            <ChampagneBoldFont style={style}>{title}</ChampagneBoldFont>
         </Pressable>
     )
 }

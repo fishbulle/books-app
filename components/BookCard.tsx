@@ -31,7 +31,7 @@ export default function BookCard() {
                                 title={'ADD TO LIBRARY'}
                                 handlePress={addBook}
                                 style={styles.buttonText}
-                                buttonStyle={{ backgroundColor: 'black' }} />
+                                buttonStyle={{ backgroundColor: '#765a3d' }} />
                         </View>
                     </View>
                 )}
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     },
     title: {
         textAlign: 'center',
+        fontFamily: 'Champagne',
         fontSize: 20,
         fontWeight: 'bold',
         paddingLeft: 40,
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: 'white',
-        fontSize: 12
+        fontSize: 15,
     },
     buttonRow: {
         flexDirection: 'row'
