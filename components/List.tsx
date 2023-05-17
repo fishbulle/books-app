@@ -1,5 +1,5 @@
-import { FlatList } from "react-native";
-import { ChampagneFont } from "./MyFonts";
+import { FlatList, Text } from "react-native";
+import { Baskerville } from "./MyFonts";
 
 interface Props {
     data: string[],
@@ -15,7 +15,7 @@ export default function List({ horizontal, cols, data, style }: Props) {
             numColumns={cols}
             data={data}
             renderItem={({ item }) =>
-                <ChampagneFont style={style}>{item} </ChampagneFont>
+                <Baskerville style={style}>{item} </Baskerville>
             } />
     )
 }

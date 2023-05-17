@@ -99,6 +99,6 @@ const styles = StyleSheet.create({
         padding: 10
     },
     list: {
-        fontSize: 20
+        fontSize: 15
     }
 })
