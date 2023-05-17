@@ -1,15 +1,20 @@
-import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
+import { View, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import { books } from './Books'
 import { MyButton } from './MyButton'
-import { Baskerville, BaskervilleBold, ChampagneBoldFont, ChampagneFont } from './MyFonts'
+import { Baskerville, BaskervilleBold } from './MyFonts'
 
 export default function BookCard() {
     const addBook = () => {
         console.log('Book added to your library')
+        // hitta bok id
+        // skicka bok till libraryScreen
+        
     }
 
     const readMore = () => {
         console.log('Here comes a modal')
+        // hitta bok id
+        // skapa en modal som visar bokens summering
     }
 
     return (
@@ -72,14 +77,15 @@ const styles = StyleSheet.create({
     },
     title: {
         textAlign: 'center',
-        fontSize: 25,
+        fontSize: 22,
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 15,
         paddingBottom: 5
     },
     author: {
-        fontSize: 17,
+        fontSize: 18,
+        color: '#333',
         paddingBottom: 15,
     },
     buttonText: {

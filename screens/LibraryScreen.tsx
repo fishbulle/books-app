@@ -1,45 +1,26 @@
-import { View, StyleSheet, Text, TouchableWithoutFeedback, Keyboard } from "react-native"
+import { View, StyleSheet, TouchableWithoutFeedback, Keyboard } from "react-native"
+import { Header } from "../components/Header"
 
-const MyBooks = () => {
-
-    // komponenter:
-    // böcker med info
-    // knapp (MyButton) för att visa mer info i en modal
-    // lista på mest lästa genres??
-
+function LibraryScreen() {
     return (
         <TouchableWithoutFeedback
             onPress={() => {
                 Keyboard.dismiss()
             }}>
-        <View>
-            <Text>Your books:</Text>
-        </View>
+            <View style={styles.container}>
+                <Header />
+            </View>
         </TouchableWithoutFeedback>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 2,
-        flexWrap: 'wrap',
-        maxHeight: 100
-    },
-    header: {
-        fontSize: 40
-    },
-    img: {
-        height: 140,
-        width: 50,
-    },
-    title: {
-        textAlign: 'center',
-        fontSize: 20,
-        fontWeight: 'bold'
-    },
-    author: {
-        fontSize: 18
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#f9f2eb'
     }
 })
 
-export default MyBooks
+export default LibraryScreen
