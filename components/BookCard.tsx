@@ -81,12 +81,12 @@ const styles = StyleSheet.create({
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 15,
-        paddingBottom: 5
+        paddingBottom: 10
     },
     author: {
         fontSize: 18,
         color: '#333',
-        paddingBottom: 15,
+        paddingBottom: 20,
     },
     buttonText: {
         color: 'white',
