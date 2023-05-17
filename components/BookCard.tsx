@@ -1,9 +1,14 @@
 import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import { books } from './Books'
+import { MyButton } from './MyButton'
 
 // knapp(MyButton) för att visa mer info i en modal
 
 const BookCard = () => {
+    const addBook = () => {
+        console.log('Book added to your library')        
+    }
+
     return (
         <ScrollView>
             <SafeAreaView>
@@ -15,6 +20,10 @@ const BookCard = () => {
                         {/* <Text>Blurb here</Text> */}
                         {/* text här ska vara knapp med länk till modal med mer info om boken */}
                         {/* möjlighet att lägga till bok till sitt bibiliotek? */}
+                        <MyButton 
+                        title={'Add to library'} 
+                        handlePress={addBook}
+                        style={styles.buttonText} />
                     </View>
                 )}
             </SafeAreaView>
@@ -45,7 +54,10 @@ const styles = StyleSheet.create({
     },
     author: {
         fontSize: 18,
-        paddingBottom: 30
+        paddingBottom: 30,
+    },
+    buttonText: {
+        color: 'white'
     }
 })
 
