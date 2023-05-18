@@ -29,7 +29,7 @@ export default function Library() {
                     <BaskervilleBold style={styles.header}>Book of the Day</BaskervilleBold>
                     <ChampagneBoldFont style={styles.rating}>My rating  {rating}/5</ChampagneBoldFont>
                     <View style={styles.bookCoverContainer}>
-                            <Image style={styles.img} source={books[Math.floor(Math.random() * books.length)].cover} />
+                        <Image style={styles.img} source={books[Math.floor(Math.random() * books.length)].cover} />
                     </View>
                     <ChampagneFont style={styles.add}>{'What would you rate this book?'}</ChampagneFont>
                     <TextInput

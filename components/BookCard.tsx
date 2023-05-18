@@ -1,7 +1,7 @@
 import { View, Image, SafeAreaView, ScrollView, StyleSheet, Modal } from 'react-native'
 import { books } from './book'
 import { MyButton } from './MyButton'
-import { Baskerville, BaskervilleBold, BaskervilleItalic } from './MyFonts'
+import { Baskerville, BaskervilleBold } from './MyFonts'
 import { useState } from 'react'
 
 export default function BookCard() {

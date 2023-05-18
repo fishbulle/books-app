@@ -1,13 +1,13 @@
-import { View, StyleSheet, SafeAreaView } from "react-native"
+import { View, StyleSheet } from "react-native"
 import { ChampagneBoldFont, HalimunFont } from "./MyFonts"
 
 export const Header = () => {
 
     return (
-            <View style={styles.headerContainer}>
-                <ChampagneBoldFont style={styles.header}>Book Heaven</ChampagneBoldFont>
-                <HalimunFont style={styles.smallHeader}>find your next read</HalimunFont>
-            </View>
+        <View style={styles.headerContainer}>
+            <ChampagneBoldFont style={styles.header}>Book Heaven</ChampagneBoldFont>
+            <HalimunFont style={styles.smallHeader}>find your next read</HalimunFont>
+        </View>
     )
 }
 

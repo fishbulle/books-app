@@ -10,10 +10,10 @@ interface ButtonProps {
 
 export const MyButton = ({ handlePress, title, style, buttonStyle }: ButtonProps) => {
     return (
-        <Pressable 
-        style={[styles.pressable, buttonStyle]} 
-        onPress={handlePress}
-        android_ripple={{ color: '#fff' }}>
+        <Pressable
+            style={[styles.pressable, buttonStyle]}
+            onPress={handlePress}
+            android_ripple={{ color: '#fff' }}>
             <ChampagneBoldFont style={style}>{title}</ChampagneBoldFont>
         </Pressable>
     )
