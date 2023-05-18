@@ -122,11 +122,5 @@ const styles = StyleSheet.create({
         margin: 12,
         borderWidth: 1,
         padding: 10
-    },
-    listView: {
-        flex: 4
-    },
-    listItems: {
-        fontSize: 15,
     }
 })

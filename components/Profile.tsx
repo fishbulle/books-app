@@ -105,6 +105,6 @@ const styles = StyleSheet.create({
         flex: 4
     },
     listItems: {
-        fontSize: 15,
+        fontSize: 15
     }
 })
