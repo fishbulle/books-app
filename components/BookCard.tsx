@@ -7,14 +7,16 @@ import { useState } from 'react'
 export default function BookCard() {
     const [modalVisible, setModalVisible] = useState(false)
     const [blurb, setBlurb] = useState('')
+    const [title, setTitle] = useState('')
 
     const addBook = () => {
         console.log('Book added to your library... but not really')
     }
 
-    const readMore = (blurb: string) => {
+    const readMore = (blurb: string, title: string) => {
         setModalVisible(!modalVisible)
         setBlurb(blurb)
+        setTitle(title)
     }
 
     return (
@@ -30,7 +32,7 @@ export default function BookCard() {
                         <View style={styles.buttonRow}>
                             <MyButton
                                 title={'Read More'}
-                                handlePress={() => readMore(b.blurb)}
+                                handlePress={() => readMore(b.blurb, b.title)}
                                 style={styles.buttonText}
                                 buttonStyle={{}} />
                             <MyButton
@@ -45,16 +47,18 @@ export default function BookCard() {
                     visible={modalVisible}
                     onRequestClose={() => setModalVisible(!modalVisible)}>
                     <View style={[styles.container, styles.elevation]}>
-                        <BaskervilleItalic style={styles.blurb}>
-                            {blurb}
-                        </BaskervilleItalic>
+                        <View style={styles.blurbContainer}>
+                            <BaskervilleBold style={styles.title}>{title}</BaskervilleBold>
+                            <Baskerville style={styles.blurbText}>
+                                {blurb}
+                            </Baskerville>
+                        </View>
+                        <MyButton
+                            title='Close'
+                            style={styles.buttonText}
+                            handlePress={() => setModalVisible(!modalVisible)}
+                            buttonStyle={{ margin: 10 }} />
                     </View>
-                    <MyButton
-                        title='Close'
-                        style={styles.buttonText}
-                        handlePress={() => setModalVisible(!modalVisible)}
-                        buttonStyle={{ margin: 20 }} />
-
                 </Modal>
             </SafeAreaView>
         </ScrollView>
@@ -111,8 +115,12 @@ const styles = StyleSheet.create({
     buttonRow: {
         flexDirection: 'row'
     },
-    blurb: {
+    blurbContainer: {
+        padding: 30
+    },
+    blurbText: {
         fontSize: 18,
-        color: '#333'
+        color: '#333',
+        textAlign: 'justify'
     }
 })
