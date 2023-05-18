@@ -38,11 +38,13 @@ export default function Profile() {
                         buttonStyle={{}} />
                 </View>
             </ScrollView>
-            <List
-                horizontal={false}
-                cols={2}
-                data={books}
-                style={styles.list} />
+            <View style={styles.listView}>
+                <List
+                    horizontal={false}
+                    cols={2}
+                    data={books}
+                    style={styles.listItems} />
+            </View>
         </SafeAreaView>
     )
 }
@@ -98,7 +100,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10
     },
-    list: {
-        fontSize: 15
+    listView: {
+        flex: 4
+    },
+    listItems: {
+        fontSize: 15,
     }
 })
