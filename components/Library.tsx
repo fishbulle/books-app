@@ -4,9 +4,11 @@
 // inputfält med rating av bok 1-5
 
 import { View, Text, SafeAreaView, ScrollView, StyleSheet, TextInput, Image } from "react-native";
-import { BaskervilleBold, ChampagneBoldFont, ChampagneFont } from "./MyFonts";
+import { BaskervilleBold, BaskervilleItalic, ChampagneBoldFont, ChampagneFont } from "./MyFonts";
 import { MyButton } from "./MyButton";
 import { useState } from "react";
+import List from "./List";
+import { books } from "./Books";
 
 export default function Library() {
     const [input, onChangeInput] = useState('')
@@ -22,13 +24,19 @@ export default function Library() {
         <ScrollView>
             <SafeAreaView>
                 <View style={[styles.container, styles.elevation]}>
-                    <Text>Your Most Read Genres</Text>
+                    <BaskervilleBold style={styles.header}>Your Most Read Genres</BaskervilleBold>
+                    <View style={styles.genreContainer}>
+                        {books.map(b =>
+                            <BaskervilleItalic style={styles.genres} key={b.id}>{b.genre}</BaskervilleItalic>
+                        )}
+                    </View>
                 </View>
                 <View style={[styles.container, styles.elevation]}>
+                    <BaskervilleBold style={styles.header}>Book of the Day</BaskervilleBold>
+                    <ChampagneBoldFont style={styles.rating}>My rating  {rating}/5</ChampagneBoldFont>
                     <View style={styles.bookCoverContainer}>
                         <Image style={styles.img} source={require('../assets/harrypotter.jpg')} />
                     </View>
-                    <ChampagneBoldFont style={styles.rating}>My rating  {rating}/5</ChampagneBoldFont>
                     <ChampagneFont style={styles.add}>{'What would you rate this book?'}</ChampagneFont>
                     <TextInput
                         keyboardType="numeric"
@@ -64,6 +72,26 @@ const styles = StyleSheet.create({
         elevation: 10,
         shadowColor: '#333333',
     },
+    header: {
+        fontSize: 20
+    },
+    genreContainer: {
+        flex: 1,
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 10,
+        backgroundColor: '#e6e6e6',
+        margin: 20,
+        borderRadius: 10,
+    },
+    genres: {
+        fontSize: 16,
+        padding: 5,
+        flexBasis: '50%',
+        textAlign: 'center'
+    },
     bookCoverContainer: {
         backgroundColor: '#e6e6e6',
         width: 200,
@@ -82,12 +110,13 @@ const styles = StyleSheet.create({
     rating: {
         fontSize: 16,
         textTransform: 'uppercase',
-        marginBottom: 10
+        marginTop: 13
     },
     add: {
         fontSize: 18,
         textAlign: 'center',
-        letterSpacing: 1
+        letterSpacing: 1,
+        paddingTop: 10
     },
     buttonText: {
         color: 'white',

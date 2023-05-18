@@ -2,7 +2,7 @@ import { FlatList } from "react-native";
 import { Baskerville } from "./MyFonts";
 
 interface Props {
-    data: string[],
+    data: any,
     horizontal: boolean,
     cols: number,
     style: {}
