@@ -37,4 +37,13 @@ export const books = [{
     blurb: "Oscar Wilde's only novel is the dreamlike story of a young man who sells his soul for eternal youth and beauty. In this celebrated work Wilde forged a devastating portrait of the effects of evil and debauchery on a young aesthete in late- 19th - century England.Combining elements of the Gothic horror novel and decadent French fiction, the book centers on a striking premise: As Dorian Gray sinks into a life of crime and gross sensuality, his body retains perfect youth and vigor while his recently painted portrait grows day by day into a hideous record of evil, which he must keep hidden from the world.For over a century, this mesmerizing tale of horror and suspense has enjoyed wide popularity.It ranks as one of Wilde's most important creations and among the classic achievements of its kind.",
     cover: require('../assets/doriangrey.jpg'),
     genre: 'classics'
-}]
+},
+{
+    id: '6',
+    title: 'Icebreaker',
+    author: 'Hannah Grace',
+    blurb: "Anastasia Allen has worked her entire life for a shot at Team USA. A competitive figure skater since she was five years old, a full college scholarship thanks to her place on the Maple Hills skating team, and a schedule that would make even the most driven person weep, Stassie comes to win.",
+    cover: require('../assets/icebreaker.jpg'),
+    genre: 'sports romance'
+}
+]
