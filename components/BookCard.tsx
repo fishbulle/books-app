@@ -1,5 +1,5 @@
 import { View, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
-import { books } from './Books'
+import { books } from './book'
 import { MyButton } from './MyButton'
 import { Baskerville, BaskervilleBold } from './MyFonts'
 

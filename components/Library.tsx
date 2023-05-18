@@ -1,12 +1,17 @@
 import { View, SafeAreaView, ScrollView, StyleSheet, TextInput, Image } from "react-native";
 import { BaskervilleBold, BaskervilleItalic, ChampagneBoldFont, ChampagneFont } from "./MyFonts";
 import { MyButton } from "./MyButton";
-import { useState } from "react";
-import { books } from "./Books";
+import { useEffect, useState } from "react";
+import { books } from "./book";
 
 export default function Library() {
     const [input, onChangeInput] = useState('')
     const [rating, setRating] = useState('?')
+    const [randomCover, setRandomCover] = useState(0)
+
+    useEffect(() => {
+        setRandomCover(Math.floor(Math.random() * books.length) * 1)
+    }, [])
 
     const onPress = () => {
         console.log("You've rated the book", rating, "/ 5")
@@ -29,7 +34,7 @@ export default function Library() {
                     <BaskervilleBold style={styles.header}>Book of the Day</BaskervilleBold>
                     <ChampagneBoldFont style={styles.rating}>My rating  {rating}/5</ChampagneBoldFont>
                     <View style={styles.bookCoverContainer}>
-                        <Image style={styles.img} source={require('../assets/icebreaker.jpg')} />
+                            <Image style={styles.img} source={randomCover} />
                     </View>
                     <ChampagneFont style={styles.add}>{'What would you rate this book?'}</ChampagneFont>
                     <TextInput
@@ -123,4 +128,4 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10
     }
-})
+}) 
