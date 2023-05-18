@@ -1,7 +1,7 @@
 import { View, SafeAreaView, ScrollView, StyleSheet, TextInput, Image } from "react-native";
 import { BaskervilleBold, BaskervilleItalic, ChampagneBoldFont, ChampagneFont } from "./MyFonts";
 import { MyButton } from "./MyButton";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { books } from "./book";
 
 export default function Library() {
@@ -104,7 +104,8 @@ const styles = StyleSheet.create({
     rating: {
         fontSize: 16,
         textTransform: 'uppercase',
-        marginTop: 13
+        marginTop: 13,
+        letterSpacing: 2
     },
     add: {
         fontSize: 18,
