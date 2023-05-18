@@ -7,11 +7,6 @@ import { books } from "./book";
 export default function Library() {
     const [input, onChangeInput] = useState('')
     const [rating, setRating] = useState('?')
-    const [randomCover, setRandomCover] = useState(0)
-
-    useEffect(() => {
-        setRandomCover(Math.floor(Math.random() * books.length) * 1)
-    }, [])
 
     const onPress = () => {
         console.log("You've rated the book", rating, "/ 5")
@@ -34,7 +29,7 @@ export default function Library() {
                     <BaskervilleBold style={styles.header}>Book of the Day</BaskervilleBold>
                     <ChampagneBoldFont style={styles.rating}>My rating  {rating}/5</ChampagneBoldFont>
                     <View style={styles.bookCoverContainer}>
-                            <Image style={styles.img} source={randomCover} />
+                            <Image style={styles.img} source={books[Math.floor(Math.random() * books.length)].cover} />
                     </View>
                     <ChampagneFont style={styles.add}>{'What would you rate this book?'}</ChampagneFont>
                     <TextInput
