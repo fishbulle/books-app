@@ -1,13 +1,7 @@
-// TODO:
-// lista på mest lästa genres
-// visa upp nån bok som är "sparad"
-// inputfält med rating av bok 1-5
-
-import { View, Text, SafeAreaView, ScrollView, StyleSheet, TextInput, Image } from "react-native";
+import { View, SafeAreaView, ScrollView, StyleSheet, TextInput, Image } from "react-native";
 import { BaskervilleBold, BaskervilleItalic, ChampagneBoldFont, ChampagneFont } from "./MyFonts";
 import { MyButton } from "./MyButton";
 import { useState } from "react";
-import List from "./List";
 import { books } from "./Books";
 
 export default function Library() {
@@ -35,7 +29,7 @@ export default function Library() {
                     <BaskervilleBold style={styles.header}>Book of the Day</BaskervilleBold>
                     <ChampagneBoldFont style={styles.rating}>My rating  {rating}/5</ChampagneBoldFont>
                     <View style={styles.bookCoverContainer}>
-                        <Image style={styles.img} source={require('../assets/harrypotter.jpg')} />
+                        <Image style={styles.img} source={require('../assets/icebreaker.jpg')} />
                     </View>
                     <ChampagneFont style={styles.add}>{'What would you rate this book?'}</ChampagneFont>
                     <TextInput

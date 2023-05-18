@@ -1,10 +1,9 @@
-import { View, Image, StyleSheet, TextInput } from 'react-native'
+import { View, Image, StyleSheet, TextInput, FlatList } from 'react-native'
 import { Baskerville, BaskervilleBold, ChampagneFont } from './MyFonts'
 import { MyButton } from './MyButton'
 import { useState } from 'react'
 import { SafeAreaView } from 'react-navigation'
 import { ScrollView } from 'react-native-gesture-handler'
-import List from './List'
 
 export default function Profile() {
     const [text, onChangeText] = useState('')
@@ -39,11 +38,13 @@ export default function Profile() {
                 </View>
             </ScrollView>
             <View style={styles.listView}>
-                <List
+                <FlatList
                     horizontal={false}
-                    cols={2}
+                    numColumns={2}
                     data={books}
-                    style={styles.listItems} />
+                    renderItem={({ item }) =>
+                        <Baskerville style={styles.listItems}>{item} </Baskerville>
+                    } />
             </View>
         </SafeAreaView>
     )
