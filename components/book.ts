@@ -3,7 +3,7 @@ export const books = [
         id: '1',
         title: 'Harry Potter and the Prisoner of Azkaban',
         author: 'J.K. Rowling',
-        blurb: "Harry Potter, along with his best friends, Ron and Hermione, is about to start his third year at Hogwarts School of Witchcraft and Wizardry. Harry can't wait to get back to school after the summer holidays. (Who wouldn't if they lived with the horrible Dursleys?) But when Harry gets to Hogwarts, the atmosphere is tense. There's an escaped mass murderer on the loose, and the sinister prison guards of Azkaban have been called in to guard the school...",
+        blurb: "Harry Potter, along with his best friends, Ron and Hermione, is about to start his third year at Hogwarts School of Witchcraft and Wizardry. Harry can't wait to get back to school after the summer holidays. \n\n(Who wouldn't if they lived with the horrible Dursleys?) \n\nBut when Harry gets to Hogwarts, the atmosphere is tense. There's an escaped mass murderer on the loose, and the sinister prison guards of Azkaban have been called in to guard the school...",
         cover: require('../assets/harrypotter.jpg'),
         genre: 'childrens'
     },
@@ -11,7 +11,7 @@ export const books = [
         id: '2',
         title: 'The Cruel Prince',
         author: 'Holly Black',
-        blurb: "Jude was seven years old when her parents were murdered and she and her two sisters were stolen away to live in the treacherous High Court of Faerie. Ten years later, Jude wants nothing more than to belong there, despite her mortality. But many of the fey despise humans. Especially Prince Cardan, the youngest and wickedest son of the High King. To win a place at the Court, she must defy him - and face the consequences. In doing so, she becomes embroiled in palace intrigues and deceptions, discovering her own capacity for bloodshed. But as civil war threatens to drown the Courts of Faerie in violence, Jude will need to risk her life in a dangerous alliance to save her sisters, and Faerie itself.",
+        blurb: "Jude was seven years old when her parents were murdered and she and her two sisters were stolen away to live in the treacherous High Court of Faerie. Ten years later, Jude wants nothing more than to belong there, despite her mortality. But many of the fey despise humans. Especially Prince Cardan, the youngest and wickedest son of the High King. \n\nTo win a place at the Court, she must defy him - and face the consequences. \n\nAs Jude becomes more deeply embroiled in palace intrigues and deceptions, she discovers her own capacity for trickery and bloodshed. But as betrayal threatens to drown the Courts of Faerie in violence, Jude will need to risk her life in a dangerous alliance to save her sisters, and Faerie itself.",
         cover: require('../assets/cruelprince.jpg'),
         genre: 'fantasy'
     },

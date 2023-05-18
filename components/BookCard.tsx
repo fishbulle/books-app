@@ -46,13 +46,16 @@ export default function BookCard() {
                 <Modal
                     visible={modalVisible}
                     onRequestClose={() => setModalVisible(!modalVisible)}>
+
                     <View style={[styles.container, styles.elevation]}>
-                        <View style={styles.blurbContainer}>
-                            <BaskervilleBold style={styles.title}>{title}</BaskervilleBold>
-                            <Baskerville style={styles.blurbText}>
-                                {blurb}
-                            </Baskerville>
-                        </View>
+                        <ScrollView>
+                            <View style={styles.blurbContainer}>
+                                <BaskervilleBold style={styles.title}>{title}</BaskervilleBold>
+                                <Baskerville style={styles.blurbText}>
+                                    {blurb}
+                                </Baskerville>
+                            </View>
+                        </ScrollView>
                         <MyButton
                             title='Close'
                             style={styles.buttonText}
@@ -119,7 +122,7 @@ const styles = StyleSheet.create({
         padding: 30
     },
     blurbText: {
-        fontSize: 18,
+        fontSize: 16,
         color: '#333',
         textAlign: 'justify'
     }
