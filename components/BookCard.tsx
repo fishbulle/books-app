@@ -2,17 +2,18 @@ import { View, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import { books } from './book'
 import { MyButton } from './MyButton'
 import { Baskerville, BaskervilleBold } from './MyFonts'
+import { useState } from 'react'
+import ModalComp from './ModalComp'
 
 export default function BookCard() {
+    const [modalVisible, setModalVisible] = useState(false)
+    
     const addBook = () => {
         console.log('Book added to your library... but not really')        
     }
 
     const readMore = () => {
-        console.log('Here comes a modal')
-        // TODO:
-        // hitta bok id
-        // skapa en modal som visar bokens summering
+        setModalVisible(!modalVisible)
     }
 
     return (
@@ -25,6 +26,16 @@ export default function BookCard() {
                         </View>
                         <BaskervilleBold style={styles.title}>{b.title}</BaskervilleBold>
                         <Baskerville style={styles.author}>by {b.author}</Baskerville>
+                        <ModalComp
+                        visible={modalVisible}
+                        onRequestClose={() => setModalVisible(!modalVisible)}
+                        title={'Close'}
+                        style={{}}
+                        handlePress={() => setModalVisible(!modalVisible)}
+                        children={
+                            books.filter(b )
+                        }
+                        />
                         <View style={styles.buttonRow}>
                             <MyButton
                                 title={'READ MORE'}
