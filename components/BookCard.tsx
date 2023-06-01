@@ -46,7 +46,6 @@ export default function BookCard() {
                 <Modal
                     visible={modalVisible}
                     onRequestClose={() => setModalVisible(!modalVisible)}>
-
                     <View style={[styles.container, styles.elevation]}>
                         <ScrollView>
                             <View style={styles.blurbContainer}>
