@@ -1,4 +1,4 @@
-import { View, ScrollView, StyleSheet, TextInput, Image } from "react-native";
+import { View, StyleSheet, TextInput, Image } from "react-native";
 import { BaskervilleBold, ChampagneBoldFont, ChampagneFont } from "./MyFonts";
 import { MyButton } from "./MyButton";
 import { useState } from "react";

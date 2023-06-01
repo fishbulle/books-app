@@ -1,4 +1,4 @@
-import { View, ScrollView, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { BaskervilleBold, BaskervilleItalic } from "./MyFonts";
 import { books } from "./book";
 
