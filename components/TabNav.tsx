@@ -14,7 +14,7 @@ export default function TabNav() {
                 screenOptions={() => ({
                     tabBarActiveTintColor: '#765a3d',
                     tabBarInactiveTintColor: '#333',
-                    tabBarStyle: { paddingTop: 2, height: 60 },
+                    tabBarStyle: { paddingTop: 2, height: 80 },
                     tabBarLabelStyle: { paddingBottom: 8 }
                 })}
             >

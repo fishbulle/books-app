@@ -1,6 +1,7 @@
-import { View, StyleSheet, TouchableWithoutFeedback, Keyboard } from "react-native"
+import { View, StyleSheet, TouchableWithoutFeedback, Keyboard, ScrollView } from "react-native"
 import { Header } from "../components/Header"
-import Library from "../components/Library"
+import Genres from "../components/Genres"
+import Rating from "../components/Rating"
 
 function LibraryScreen() {
     return (
@@ -8,10 +9,13 @@ function LibraryScreen() {
             onPress={() => {
                 Keyboard.dismiss()
             }}>
-            <View style={styles.container}>
-                <Header />
-                <Library />
-            </View>
+            <ScrollView>
+                <View style={styles.container}>
+                    <Header />
+                    <Genres />
+                    <Rating />
+                </View>
+            </ScrollView>
         </TouchableWithoutFeedback>
     )
 }
