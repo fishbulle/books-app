@@ -1,22 +1,25 @@
-import { View, Image, SafeAreaView, ScrollView, StyleSheet, Modal } from 'react-native'
+import { View, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import { books } from './book'
 import { MyButton } from './MyButton'
-import { Baskerville, BaskervilleBold } from './MyFonts'
+import { Baskerville, BaskervilleBold, BaskervilleItalic } from './MyFonts'
 import { useState } from 'react'
+import { MyModal } from './MyModal'
 
 export default function BookCard() {
     const [modalVisible, setModalVisible] = useState(false)
     const [blurb, setBlurb] = useState('')
     const [title, setTitle] = useState('')
+    const [author, setAuthor] = useState('')
 
     const addBook = () => {
         console.log('Book added to your library... but not really')
     }
 
-    const readMore = (blurb: string, title: string) => {
+    const readMore = (blurb: string, title: string, author: string) => {
         setModalVisible(!modalVisible)
         setBlurb(blurb)
         setTitle(title)
+        setAuthor(author)
     }
 
     return (
@@ -32,7 +35,7 @@ export default function BookCard() {
                         <View style={styles.buttonRow}>
                             <MyButton
                                 title={'Read More'}
-                                handlePress={() => readMore(b.blurb, b.title)}
+                                handlePress={() => readMore(b.blurb, b.title, b.author)}
                                 style={styles.buttonText}
                                 buttonStyle={{}} />
                             <MyButton
@@ -43,25 +46,15 @@ export default function BookCard() {
                         </View>
                     </View>
                 )}
-                <Modal
-                    visible={modalVisible}
+                <MyModal
+                    modalVisible={modalVisible}
                     onRequestClose={() => setModalVisible(!modalVisible)}>
-                    <View style={[styles.container, styles.elevation]}>
-                        <ScrollView>
-                            <View style={styles.blurbContainer}>
-                                <BaskervilleBold style={styles.title}>{title}</BaskervilleBold>
-                                <Baskerville style={styles.blurbText}>
-                                    {blurb}
-                                </Baskerville>
-                            </View>
-                        </ScrollView>
-                        <MyButton
-                            title='Close'
-                            style={styles.buttonText}
-                            handlePress={() => setModalVisible(!modalVisible)}
-                            buttonStyle={{ margin: 10 }} />
-                    </View>
-                </Modal>
+                    <BaskervilleBold style={styles.title}>{title}</BaskervilleBold>
+                    <BaskervilleItalic style={styles.author}>{author}</BaskervilleItalic>
+                    <Baskerville style={styles.blurbText}>
+                        {blurb}
+                    </Baskerville>
+                </MyModal>
             </SafeAreaView>
         </ScrollView>
     )
@@ -108,6 +101,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#333',
         paddingBottom: 20,
+        textAlign: 'center'
     },
     buttonText: {
         color: 'white',
@@ -116,9 +110,6 @@ const styles = StyleSheet.create({
     },
     buttonRow: {
         flexDirection: 'row'
-    },
-    blurbContainer: {
-        padding: 30
     },
     blurbText: {
         fontSize: 16,
