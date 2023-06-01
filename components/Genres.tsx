@@ -5,7 +5,6 @@ import { books } from "./book";
 export default function Genres() {
 
     return (
-        <ScrollView>
             <View style={[styles.container, styles.elevation]}>
                 <BaskervilleBold style={styles.header}>Your Most Read Genres</BaskervilleBold>
                 <View style={styles.genreContainer}>
@@ -14,7 +13,6 @@ export default function Genres() {
                     )}
                 </View>
             </View>
-        </ScrollView>
     )
 
 }

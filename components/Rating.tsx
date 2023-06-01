@@ -15,7 +15,6 @@ export default function Rating() {
     }
 
     return (
-        <ScrollView>
             <View style={[styles.container, styles.elevation]}>
                 <BaskervilleBold style={styles.header}>Book of the Day</BaskervilleBold>
                 <ChampagneBoldFont style={styles.rating}>My rating  {rating}/5</ChampagneBoldFont>
@@ -37,7 +36,6 @@ export default function Rating() {
                     style={styles.buttonText}
                     buttonStyle={{}} />
             </View>
-        </ScrollView>
     )
 }
 
