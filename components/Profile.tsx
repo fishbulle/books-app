@@ -40,7 +40,7 @@ export default function Profile() {
             <View style={styles.listView}>
                 <FlatList
                     horizontal={false}
-                    numColumns={2}
+                    numColumns={1}
                     data={books}
                     renderItem={({ item }) =>
                         <Baskerville style={styles.listItems}>{item} </Baskerville>
